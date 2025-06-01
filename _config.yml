@@ -1,4 +1,0 @@
-title: E-Library Store
-exclude:
-  - node_modules
-  - Server/node_modules

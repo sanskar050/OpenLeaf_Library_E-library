@@ -13,8 +13,8 @@ const Register = () => {
   function createAccount(e) {
     e.preventDefault()
     axios.post("http://localhost:3001/register", {name, email, password})
-    .then(result => {
-      console.log(result)
+    .then( () => {
+      // console.log(result)
       navigate("/login")
     })
     .catch(err => console.log(err))

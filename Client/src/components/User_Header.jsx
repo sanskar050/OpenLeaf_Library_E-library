@@ -16,7 +16,7 @@ const Header = () => {
 
         <div className='mainHeader'>
 
-          <NavLink to="/" className="No-Underline">
+          <NavLink to="/home" className="No-Underline">
             <div className='logoAndName'>
               <img src={logo} alt='logo'></img>
               <div className='libraryName'>
@@ -38,14 +38,14 @@ const Header = () => {
         <div className="navbar">
 
           <div className='lists'>
-            <NavLink className={(e) => { return e.isActive ? "navFocus No-Underline" : "No-Underline" }} to="/"><li>Home</li></NavLink>
+            <NavLink className={(e) => { return e.isActive ? "navFocus No-Underline" : "No-Underline" }} to="/home"><li>Home</li></NavLink>
             <NavLink className={(e) => { return e.isActive ? "navFocus No-Underline" : "No-Underline" }} to="/books"><li>Books</li></NavLink>
             <NavLink className={(e) => { return e.isActive ? "navFocus No-Underline" : "No-Underline" }} to="/about"><li>About</li></NavLink>
             <NavLink className={(e) => { return e.isActive ? "navFocus No-Underline" : "No-Underline" }} to="/contact-us"><li>Contact Us</li></NavLink>
           </div>
 
           <div className='login'>
-            <NavLink className={(e) => { return e.isActive ? "navFocus No-Underline" : "No-Underline" }} to="/login"><li>Logout</li></NavLink>
+            <NavLink className={(e) => { return e.isActive ? "navFocus No-Underline" : "No-Underline" }} to="/"><li>Logout</li></NavLink>
           </div>
 
         </div>

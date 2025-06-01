@@ -3,13 +3,17 @@ import { useParams } from 'react-router-dom'
 import Book from './Book'
 
 const Searched_Page = () => {
-  const params = useParams()
+  const {book} = useParams()
+
   return (
     <div className='searchPageBook'>
-      <Book/>
-        <div className="searchPageBookOverview">
-
-        </div>
+      <h1>Search Results for: " {book} "</h1>
+      <div className="flex">
+        <Book/>
+          <div className="searchPageBookOverview">
+            The Law of Attraction
+          </div>
+      </div>
     </div>
   )
 }

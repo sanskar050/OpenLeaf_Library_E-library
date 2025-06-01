@@ -1,13 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Header.css"
 import searchLogo from "./search.png"
 import logo from "./logo.png"
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 const Header = () => {
 
-  function search() {
-    let searched_book_name = document.querySelector(".searchArea").value
+  const [search, setSearch] = useState()
+  const navigate = useNavigate()
+  
+   const search_book = () => {
+    const trimmedSearch = search.trim()
+    if (trimmedSearch) {
+      navigate(`/search/${encodeURIComponent(trimmedSearch)}`)
+    } else {
+      alert("Please enter a search term.")
+    }
   }
 
   return (
@@ -28,8 +36,8 @@ const Header = () => {
 
           <div className='searchBar'>
             <div>
-              <input className='searchArea' type='search' placeholder='Search'></input>
-              <NavLink to="/search/book"><button onClick={search} className='searchIcon' type='button'><img src={searchLogo} alt='search' /></button></NavLink>
+              <input onChange={(e) => setSearch(e.target.value)} className='searchArea' type='search' value={search} placeholder='Search' />
+              <button onClick={search_book} className='searchIcon' type='button'><img src={searchLogo} alt='search' /></button>
             </div>
           </div>
 

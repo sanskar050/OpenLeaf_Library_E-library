@@ -50,7 +50,7 @@
     position: relative;
 }
 
-.searchBar > div > input[type="search"] {
+.searchArea {
     height: 40px;
     width: 250px;
     border-radius: 20px;
@@ -139,7 +139,7 @@
     .searchBar {
         margin:  auto;
     }
-    .searchBar > div > input[type="search"] {
+    .searchArea {
         width: 300px;
     }
     .navbar {
@@ -160,7 +160,7 @@
 }
 
 @media screen and (max-width: 719px) and (min-width: 400px) {
-    .searchBar > div > input[type="search"] {
+    .searchArea {
         width: 350px;
     }
 }

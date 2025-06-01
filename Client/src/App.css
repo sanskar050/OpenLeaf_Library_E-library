@@ -54,7 +54,13 @@ a:hover {
   height: 60vh;
   display: flex;
   padding-left: 50px;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+  gap: 100px;
 }
 
 @keyframes blink {
